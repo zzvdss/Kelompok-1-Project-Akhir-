@@ -1,39 +1,39 @@
 package Kasir;
 
 public class Barang {
-    String namaBarang;
-    float hargaBarang;
-    int jumBeli;
+    String jenis,bhn,kode;
+    int harga,total,no, ppn,grandtotal,bahan,subtotal=0;
+    float qty;
 
-    public Barang( String namaBarang, float hargaBarang, int jumBeli){
-        this.namaBarang = namaBarang;
-        this.hargaBarang = hargaBarang;
-        this.jumBeli = jumBeli;
+    public int getNo() {
+        return no;
     }
-
-
-    public String getNamaBarang() {
-        return namaBarang;
+    public String getKode() {
+        return kode;
     }
-
-    public void setNamaBarang(String namaBarang) {
-        this.namaBarang = namaBarang;
+    public String getJenis() {
+        return jenis;
     }
-
-    public float getHargaBarang() {
-        return hargaBarang;
+    public String getBhn() {
+        return bhn;
     }
-
-    public void setHargaBarang(float hargaBarang) {
-        this.hargaBarang = hargaBarang;
+    public int getHarga() {
+        return harga;
     }
-
-    public int getJumBeli() {
-        return jumBeli;
+    public float getQty() {
+        return qty;
     }
-
-    public void setJumBeli(int jumBeli) {
-        this.jumBeli = jumBeli;
+    public int getTotal() {
+        return total;
     }
-
+    public Barang(int no,String kode,String jenis, String bhn, int harga, float qty, int total)
+    {
+        this.no = no;
+        this.kode = kode;
+        this.jenis = jenis;
+        this.bhn = bhn;
+        this.harga = harga;
+        this.qty = qty;
+        this.total = total;
+    }
 }
