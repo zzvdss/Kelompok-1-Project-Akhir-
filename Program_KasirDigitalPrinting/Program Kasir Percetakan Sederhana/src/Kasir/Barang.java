@@ -1,16 +1,15 @@
 package Kasir;
 
-public class dataBarang {
+public class Barang {
     String namaBarang;
     float hargaBarang;
     int jumBeli;
-    double bayar;
-public dataBarang( String namaBarang, float hargaBarang, int jumBeli, double bayar){
-    this.namaBarang = namaBarang;
-    this.hargaBarang = hargaBarang;
-    this.jumBeli = jumBeli;
-    this.bayar = bayar;
-}
+
+    public Barang( String namaBarang, float hargaBarang, int jumBeli){
+        this.namaBarang = namaBarang;
+        this.hargaBarang = hargaBarang;
+        this.jumBeli = jumBeli;
+    }
 
 
     public String getNamaBarang() {
@@ -36,8 +35,5 @@ public dataBarang( String namaBarang, float hargaBarang, int jumBeli, double bay
     public void setJumBeli(int jumBeli) {
         this.jumBeli = jumBeli;
     }
-    public double getBayar(){
-    bayar = hargaBarang * jumBeli;
-    return bayar;
-    }
+
 }
