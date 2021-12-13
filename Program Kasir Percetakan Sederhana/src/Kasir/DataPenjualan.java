@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DataPenjualan {
     ArrayList<Barang> list;
     String jenis = null,bhn = null;
-    int harga = 0,bahan,qty = 0,total=0,subtotal=0,jmlbayar=0,kembali=0,ppn,grandtotal;;
+    int harga = 0,bahan,qty = 0,total=0,subtotal=0,jmlbayar=0,kembali=0,ppn,grandtotal;
     int no = 1;
     int n;
     Scanner scan;
@@ -114,7 +114,7 @@ public class DataPenjualan {
         System.out.println(" WIYUNG SURABAYA");
         System.out.println(" KASIR - ADMIN ");
         System.out.println("--------------------------------------------------------------");
-        System.out.println("|No.| Kode |"+" Jenis |"+" Bahan |"+" Harga |"+" Jumlah |"+" Total |");
+        System.out.println("|No.| Kode |"+" Jenis |"+" Bahan |"+" Harga |"+" Jumlah |"+"2" + " Total |");
         System.out.println("--------------------------------------------------------------");
 
         if(list.isEmpty()) {
@@ -125,16 +125,16 @@ public class DataPenjualan {
                             +list.get(i).getJenis()+" |"+list.get(i).getBhn()+" |"+list.get(i).getHarga()
                         +" |"+list.get(i).getQty()+" |"+list.get(i).getTotal()+" |");
                 subtotal+=list.get(i).getTotal();
-                ppn=(int) ((int) subtotal* 0.1);
+                ppn=(int) (subtotal* 0.1);
                 grandtotal=subtotal+ppn;
             }
             System.out.println("--------------------------------------------------------------");
             System.out.println("\t\t\t\t\t Subtotal         : Rp. "+subtotal);
             System.out.println("\t\t\t\t\t ppn              : Rp. "+ppn);
             System.out.println("\t\t\t\t\t Total Semuanya   : Rp. "+grandtotal);
-            System.out.println("\t\t\t\t\t Pembayaran       : Rp. ");
+            System.out.print("\t\t\t\t\t Pembayaran       : Rp. ");
             jmlbayar=bayar.nextInt();
-            kembali=(int) (jmlbayar-grandtotal);
+            kembali=jmlbayar-grandtotal;
             System.out.println("\t\t\t\t\t Kembalian : Rp. "+kembali);
             System.out.print("\n");
 

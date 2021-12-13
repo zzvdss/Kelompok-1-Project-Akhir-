@@ -25,15 +25,15 @@ public class Kasir {
                     kasir.transaksi();
                     break;
                 case 3:
-                    System.out.println(" TERIMAKASIH ");
+                    System.out.println("TERIMAKASIH");
                     break;
                 default:
-                    System.out.println(" Inputan Salah !! ");
+                    System.out.println("Inputan Salah !!");
             }
         } while (pil <= 2);
     }
 
-     public void listharga(){
+     void listharga(){
 
         ArrayList<String> list = new ArrayList<String>();
         list.add("======================================================");
