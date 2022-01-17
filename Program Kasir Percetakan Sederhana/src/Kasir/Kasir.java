@@ -8,6 +8,8 @@ public class Kasir {
         int pil;
         do {
             Scanner input = new Scanner(System.in);
+            System.out.println(" ");
+            System.out.println(" ");
             System.out.println("\tMain Menu\n" +
                     "\t\n" +
                     "\t1. List Harga\n" +
@@ -33,7 +35,7 @@ public class Kasir {
         } while (pil <= 2);
     }
 
-     void listharga(){
+     private void listharga(){
 
         ArrayList<String> list = new ArrayList<String>();
         list.add("======================================================");
@@ -60,8 +62,8 @@ public class Kasir {
         }
     }
 
-    public void transaksi(){
-        DataPenjualan obj = new DataPenjualan();
+    private void transaksi(){
+        Penjualan obj = new Penjualan();
         obj.getVal();
         obj.display();
         obj.clear();

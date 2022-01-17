@@ -1,8 +1,10 @@
 package Kasir;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DataPenjualan {
+public class Penjualan {
+
     ArrayList<Barang> list;
     String jenis = null,bhn = null;
     int harga = 0,bahan,qty = 0,total=0,subtotal=0,jmlbayar=0,kembali=0,ppn,grandtotal;
@@ -14,7 +16,7 @@ public class DataPenjualan {
     Scanner bayar = new Scanner(System.in);
 
 
-    void getVal() {
+    public void getVal() {
         list = new ArrayList<Barang>();
         scan = new Scanner(System.in);
         System.out.println("Bersiap Memulai Transaksi");
@@ -92,7 +94,7 @@ public class DataPenjualan {
                         bhn="80 x 180 Indoor";
                         harga=115000;
                     }
-                        else{
+                    else{
                         System.out.println("Bahan yang anda pilih tidak ada!!!");
                     }
                     System.out.print("Silahkan masukan jumlah : ");
@@ -108,7 +110,7 @@ public class DataPenjualan {
         }
     }
 
-    void display() {
+    public void display() {
         System.out.println("\n\n");
         System.out.println(" GEMINI DIGITAL PRINTING ");
         System.out.println(" WIYUNG SURABAYA");
@@ -122,7 +124,7 @@ public class DataPenjualan {
         }else {
             for(int i=0; i<list.size(); i++) {
                 System.out.println("|"+list.get(i).getNo() +" |"+list.get(i).getKode() +" |"
-                            +list.get(i).getJenis()+" |"+list.get(i).getBhn()+" |"+list.get(i).getHarga()
+                        +list.get(i).getJenis()+" |"+list.get(i).getBhn()+" |"+list.get(i).getHarga()
                         +" |"+list.get(i).getQty()+" |"+list.get(i).getTotal()+" |");
                 subtotal+=list.get(i).getTotal();
                 ppn=(int) (subtotal* 0.1);
@@ -141,7 +143,7 @@ public class DataPenjualan {
         }
     }
 
-    void clear(){
+    public void clear(){
         for(int j=0; j<list.size(); j++) {
             list.removeAll(list);
             no=1;
